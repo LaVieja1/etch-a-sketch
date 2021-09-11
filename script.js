@@ -63,7 +63,9 @@ function setupGrid(size) {
     for (let i = 0; i < size * size; i++) {
       const gridElement = document.createElement('div')
       gridElement.addEventListener('mouseover', changeColor)
+      gridElement.addEventListener('touchstart', changeColor) 
       gridElement.addEventListener('touchmove', changeColor)
+      gridElement.addEventListener('touchend', changeColor)
       gridElement.classList.add('border')
       grid.appendChild(gridElement)
     }
